@@ -1,6 +1,4 @@
 const mongoose = require('mongoose')
-const bcrypt = require('bcrypt')
-const validator = require('validator')
 
 const userInfoSchema = new mongoose.Schema({
     //Name/Familly info
@@ -71,6 +69,9 @@ const userInfoSchema = new mongoose.Schema({
 
     occupation2Years: Number,
 
+    //Skills info
+    skills: String,
+
     //References info
     reference1: {
         type: String,
@@ -79,3 +80,7 @@ const userInfoSchema = new mongoose.Schema({
 
     reference2: String,
 })
+
+const UserInfo = mongoose.model('UserInfo', userInfoSchema)
+
+module.exports = UserInfo
