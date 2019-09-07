@@ -1,0 +1,85 @@
+body {
+    background-image: linear-gradient(127deg, #00B2FF, #1874CD);
+    background-color: #00B2FF;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+form {
+    background-image: linear-gradient(127deg, #DCDCDC, #C0C0C0);
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 60%;
+    max-width: 60vw;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 2px 4px 10px black;
+}
+
+form label {
+    font-weight: bolder;
+    margin-left: 15px;
+    font-family: Arial, Sans-serif;
+}
+
+form input {
+    margin: 15px;
+    font-size: 4vw;
+    border-radius: 5px;
+    padding: 10px;
+    border: 2px solid black;
+}
+
+form select {
+    margin: 15px;
+    font-size: 4vw;
+    border: 2px solid black;
+    background-color: #FBFBF9;
+}
+
+form button {
+    margin: 10px;
+    background-color: #FBFBF9;
+    font-size: 10vw;
+    width: auto;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+form button:hover {
+    background-image: linear-gradient(127deg, #00B2FF, #1874CD);
+    color: #FBFBF9;
+}
+
+@media only screen and (max-width: 800px) {
+
+form {
+    width: 100%;
+    height:100%;
+    margin-left: 0%;
+    margin-right: 0%;
+    max-width: 100%;
+}
+
+form label {
+    font-size: 3vw;
+}
+
+form input {
+    font-size: 5vw;
+    margin: 5px;
+}
+
+form select {
+    font-size: 5vw;
+    margin: 5px;
+}
+
+form button {
+    font-size: 7vw;
+}
+}
