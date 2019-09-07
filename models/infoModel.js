@@ -6,6 +6,12 @@ const userInfoSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Please enter your full name.']
     },
+
+    user: {
+        type: mongoose.Schema.ObjectId,
+        ref: 'User',
+        required: [true, 'Information must belong to a User!']
+      },
     
     familyName: {
         type: String,
