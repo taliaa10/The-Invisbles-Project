@@ -1,6 +1,7 @@
 const User = require('../models/userModel');
 const catchAsync = require('../utils/catchAsync');
 const jwt = require('jsonwebtoken');
+const AppError = require('../utils/appError');
 
 const signToken = id => {
     return jwt.sign({id}, process.env.JWT_SECRET, {
@@ -10,7 +11,6 @@ const signToken = id => {
 
 const createSendToken = (user, statusCode, res) => {
     const token = signToken(user._id)
-
     const cookieOptions = {
         expires: new Date(
             Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
@@ -30,8 +30,8 @@ const createSendToken = (user, statusCode, res) => {
         data: {
             user
         }
-    })
-}
+    });
+};
 
 exports.signUp = catchAsync(async(req, res, next)=> {
         const newUser = await User.create({
@@ -46,3 +46,20 @@ exports.signUp = catchAsync(async(req, res, next)=> {
         })
         createSendToken(newUser, 201, res)  
 })
+
+exports.login = catchAsync(async (req, res, next) => {
+    const {email, password} = req.body;
+
+    if(!email || !password) {
+        return(next(new AppError('Please provide name and password', 400)))
+    }
+
+    const user = await User.findOne({email}).select('password');
+
+    if(!user || !(await user.correctPassword(password, user.password))) {
+        return next(new AppError('Incorrect name or password', 401))
+    }
+
+    createSendToken(user, 200, res);
+    console.log('user logged in')
+});
