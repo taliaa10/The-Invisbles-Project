@@ -53,7 +53,7 @@ const userRegistrationSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Please confirm your password'],
         validate: {
-            validator: function(e) {
+            validator: function(el) {
                 return el === this.password;
             },
         message: 'Passwords are not the same!'
