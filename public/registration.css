@@ -186,13 +186,12 @@ body {
   min-height: 100vh;
 }
 
-.auth--hero {
-  flex: 0 0 60%;
+.side-nav {
+  flex: 0 0 20%;
   background-image: radial-gradient(
-      rgba(25, 24, 55, 0.3),
-      rgba(13, 16, 78, 0.3)
-    ),
-    url('img/JusticeLayerHeader.jpg');
+    rgba(25, 24, 55, 0.3),
+    rgba(13, 16, 78, 0.3)
+  );
   /* background-image: url('img/JusticeLayerHeader.jpg'); */
   background-size: cover;
   background-position: top center;
