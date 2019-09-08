@@ -8,6 +8,7 @@ const VIEWS_PATH = path.join(__dirname, '/views');
 const AppError = require('./utils/appError');
 const userRouter = require('./routes/userRoutes');
 const viewRouter = require('./routes/viewRoutes');
+const userInfoRouter = require('./routes/userInfoRoutes')
 
 app.use(cors());
 app.use(express.json());
@@ -21,6 +22,8 @@ app.use(cookieParser());
 // app.use('/', viewRouter);
 app.use('/api/v1/users', userRouter);
 app.use('/', viewRouter);
+app.use('/api/v1/user-info', userInfoRouter);
+
 
 app.all('*', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
