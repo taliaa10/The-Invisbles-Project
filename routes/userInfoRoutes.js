@@ -5,7 +5,7 @@ const userInfoController = require('../controllers/userInfoController');
 const userInfoRouter = express.Router();
 
 userInfoRouter
-    .route('/:id')
+    .route('/')
     .post(userInfoController.createUserInfo);
 
 module.exports = userInfoRouter;
