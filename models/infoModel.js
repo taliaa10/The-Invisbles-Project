@@ -15,7 +15,7 @@ const userInfoSchema = new mongoose.Schema({
     
     familyName: {
         type: String,
-        required: [true, 'Please enter your given family name.']
+        required: [true, 'Please enter your family name.']
     },
 
     firstName: {
@@ -85,6 +85,9 @@ const userInfoSchema = new mongoose.Schema({
     },
 
     reference2: String,
+
+    //Admin assistance info
+    admin: String,
 })
 
 const UserInfo = mongoose.model('UserInfo', userInfoSchema)
