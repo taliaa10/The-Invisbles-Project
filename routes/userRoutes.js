@@ -4,7 +4,7 @@ const userInfoController = require('../controllers/userInfoController');
 
 const userRouter = express.Router();
 
-userRouter.post('/signup', authController.signUp);
+userRouter.post('/registration', authController.signUp);
 userRouter.post('/login', authController.login);
 userRouter.post('/user-info', userInfoController.createUserInfo);
 
