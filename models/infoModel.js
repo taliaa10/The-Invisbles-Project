@@ -11,7 +11,37 @@ const userInfoSchema = new mongoose.Schema({
         type: mongoose.Schema.ObjectId,
         ref: 'User',
         required: [true, 'Information must belong to a User!']
-      },
+    },
+
+    dobMonth: {
+        type: String,
+        required: [true, 'Please provide your birth month. If you do not know, please type N/A']
+    },
+
+    dobDay: {
+        type: String,
+        required: [true, 'Please provide the day of the month you were born. If you do not know, please type N/A']
+    },
+
+    dobYear: {
+        type: String,
+        required: [true, 'Please provide the year you were born. If you do not know, please type N/A']
+    },
+
+    age: {
+        type: Number,
+        required: [true, 'Please provide your age. If you do not know, please type N/A']
+    },
+    
+    gender: {
+        type: String,
+        required: [true, 'Please provide your gender. If you do not wish to say your gender, please select options 3 or 4.'],
+        enum: {
+            values: ['male', 'female', 'other', 'I do not wish to provide'],message: 'Gender is either: male, female, other, I do not wish to provide'
+        }
+    },
+
+    phoneNumber: String,
     
     familyName: {
         type: String,
