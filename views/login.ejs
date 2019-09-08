@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="registration.css" />
+    <title>Login</title>
+</head>
+<body>
+    <div class='container'>
+        <section class='auth--hero'>img</section>
+        <section class='auth--section'>
+            <form class='auth--form'>
+                <h1 class='auth--title'>Login</h1>
+                <div>
+                    <input
+                        class='auth--input'
+                        type='text'
+                        id='email'
+                        name='email'
+                        placeholder='Enter your email address'
+                        required
+                    />
+                    <label for='email' class='auth--label'>Email Address</label>
+                    
+                    <input
+                        class='auth--input'
+                        type='password'
+                        id='password'
+                        name='password'
+                        placeholder='Enter your password'
+                        required
+                    />
+                    <label for='password' class='auth--label'>Password</label>
+                    <div style="display: flex; flex-direction: column; align-content: center; justify-content: center">  
+                        <button class='btn auth--btn' type='submit'>Login</button>
+                        <span>Forgot Password?</span>
+                        <span>Do not have an account? Register <a href='/registration'>here.</a></span>
+                    </div>
+                </form>
+        </section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+    <script src='js/login.js'></script>
+    
+</body>
+</html>

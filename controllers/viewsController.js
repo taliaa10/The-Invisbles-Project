@@ -5,3 +5,9 @@ exports.getSignUpForm = (req, res) => {
     title: 'Register an account'
   });
 };
+
+exports.getLogin = (req, res) => {
+  res.status(200).render('login', {
+    title: 'Login to your account'
+  });
+};
