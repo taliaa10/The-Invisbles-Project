@@ -1,78 +1,141 @@
-<htmL>
-  <header>
-    <meta name="viewport" content="width=device-width" />
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="registration.css" />
-  </header>
+    <title>Registration</title>
+  </head>
   <body>
-    <form class="form--signUp">
-      <label>Full Name:</label>
-      <input
-        type="text"
-        id="name"
-        name="name"
-        placeholder="Enter your full name."
-        required
-      />
-      <label>Date of Birth:</label>
-      <input
-        type="date"
-        id="dateOfBirth"
-        name="dateOfBirth"
-        placeholder="Enter your date of birth."
-        required
-      />
-      <label>Age:</label>
-      <input
-        type="number"
-        id="age"
-        name="age"
-        placeholder="Enter your age."
-        required
-      />
-      <label>Gender:</label>
-      <select required id="genderSelect">
-        <option default>Select your gender.</option>
-        <option value="male" id="male">Male</option>
-        <option value="female" id="female">Female</option>
-        <option value="other" id="other">Other</option>
-        <option value="notProvided" id="notProvided"
-          >I would prefer not to say</option
-        >
-      </select>
-      <label>Email Address:</label>
-      <input
-        type="text"
-        id="emailAddress"
-        name="emailAddress"
-        placeholder="Enter your email address."
-        required
-      />
-      <label>Phone Number:</label>
-      <input
-        type="text"
-        id="phoneNumber"
-        name="phoneNumber"
-        placeholder="Enter your phone number."
-      />
-      <label>Password:</label>
-      <input
-        type="password"
-        id="password"
-        name="password"
-        placeholder="Enter a password."
-        required
-      />
-      <label>Password Confirmation:</label>
-      <input
-        type="password"
-        id="passwordConfirm"
-        name="passwordConfirm"
-        placeholder="Re-enter your password."
-        required
-      />
-      <button type="submit">Register</button>
-    </form>
+    <!-- <header class="header">
+      <img src="img/logo.png" alt="company logo" class="logo" />
+      
+      <form action="#" class="search">
+        <input type="text" class="search__input" placeholder="Search hotels" />
+        <button class="search__button">
+          <svg class="search__icon">
+            <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+          </svg>
+        </button>
+      </form>
+      <nav class="user-nav">
+        <div class="user-nav__icon-box">
+          <svg class="user-nav__icon">
+            <use xlink:href="img/sprite.svg#icon-bookmark"></use>
+          </svg>
+          <span class="user-nav__notification">7</span>
+        </div>
+        <div class="user-nav__icon-box">
+          <svg class="user-nav__icon">
+            <use xlink:href="img/sprite.svg#icon-chat"></use>
+          </svg>
+          <span class="user-nav__notification">13</span>
+        </div>
+        <div class="user-nav__user">
+          <img src="img/user.jpg" alt="" class="user-nav__user-photo" />
+          <span class="user-nav__user-name">Taliaa</span>
+        </div>
+      </nav>
+    </header> -->
+    <div class="container">
+      <section class="auth--hero">img</section>
+      <section class="auth--section">
+        <form class="auth--form">
+          <h1 class="auth--title">Register</h1>
+          <div>
+            <input
+              class="auth--input"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Full Name"
+              required
+            />
+            <label for="name" class="auth--label">Full Name</label>
+          </div>
+          <!-- <input
+            class="auth--input"
+            type="date"
+            id="dateOfBirth"
+            name="dateOfBirth"
+            placeholder="Enter your date of birth"
+            required
+          />
+          <label for="dateOfBirth" class="auth--label">Date of Birth</label> -->
+
+          <!-- <input
+            class="auth--input"
+            type="text"
+            id="age"
+            name="age"
+            placeholder="Enter your age"
+            required
+          />
+          <label for="age" class="auth--label">Age</label> -->
+
+          <!-- <select class="auth--input" required id="genderSelect">
+            <option default>Select your gender</option>
+            <option value="male" id="male">Male</option>
+            <option value="female" id="female">Female</option>
+            <option value="other" id="other">Other</option>
+            <option value="notProvided" id="notProvided"
+              >I would prefer not to say</option
+            >
+          </select>
+          <label for="gender" class="auth--label">Gender:</label> -->
+
+          <input
+            class="auth--input"
+            type="text"
+            id="emailAddress"
+            name="emailAddress"
+            placeholder="Enter your email address"
+            required
+          />
+          <label for="emailAddress" class="auth--label">Email Address</label>
+
+          <input
+            class="auth--input"
+            type="text"
+            id="phoneNumber"
+            name="phoneNumber"
+            placeholder="Enter your phone number"
+          />
+          <label for="phoneNumber" class="auth--label">Phone Number</label>
+
+          <input
+            class="auth--input"
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter a password"
+            required
+          />
+          <label for="password" class="auth--label">Password</label>
+
+          <input
+            class="auth--input"
+            type="password"
+            id="passwordConfirm"
+            name="passwordConfirm"
+            placeholder="Re-enter your password"
+            required
+          />
+          <label for="passwordConfirm" class="auth--label"
+            >Password Confirmation</label
+          >
+          <button class="btn auth--btn" type="submit">Register</button>
+          <span>Forgot Password?</span>
+          <span>Already have an account? Log in <a href="#">Here</a></span>
+        </form>
+      </section>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
     <script src="js/registration.js"></script>
   </body>
-</htmL>
+</html>
